@@ -1,1 +1,5 @@
 *.dec
+*.h
+*.cpp
+*.c
+encrypt_key
