@@ -1,5 +1,7 @@
+encrypt_key
 *.dec
 *.h
 *.cpp
 *.c
-encrypt_key
+*.py
+!encrypt*.py
