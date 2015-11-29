@@ -1,4 +1,5 @@
 encrypt_key
+*.test
 *.dec
 *.h
 *.cpp

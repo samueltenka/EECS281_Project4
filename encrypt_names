@@ -1,6 +1,6 @@
 encrypt_testfile
 python_playground/fast_tsp.py
 python_playground/generate_testcases.py
-python_playground/coordinates_small
-python_playground/coordinates_medium
+python_playground/coordinates_small.test
+python_playground/coordinates_medium.test
 
