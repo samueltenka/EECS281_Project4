@@ -1,8 +1,13 @@
 encrypt_testfile
 python_playground/fast_tsp.py
+python_playground/fast_tsp2.py
 python_playground/generate_testcases.py
+python_playground/coordinates_hand.test
 python_playground/coordinates_small.test
+python_playground/coordinates_smedium.test
 python_playground/coordinates_medium.test
+python_playground/coordinates_largedium.test
+python_playground/coordinates_large.test
 testcases/gentestcases.py
 testcases/test-1-MST.txt
 testcases/test-2-MST.txt
