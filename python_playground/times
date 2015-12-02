@@ -1,8 +1,9 @@
-testcase size  |time wo|time w/|factor
-               |2opt   |2opt   |
-HAND	 5	 0.017	0.018	~100%
-SMALL	 8	 0.089	0.078	~ 87%
-	 9	 0.422	0.234	~ 55%
-MEDIUM	10	 1.887	0.620	~ 32%
-	11	25.233	3.226	~ 13%
-LARGE	12	44.950	6.579	~ 15%
+testcase size  |time wo|time w/|factor |time w |factor
+               |2opt   |2opt   |       |fixed  |
+               |       |       |       |start  |
+HAND	 5	 0.017	0.018	~100%	0.013	~ 72%
+SMALL	 8	 0.089	0.078	~ 87%	0.022	~ 28%
+	 9	 0.422	0.234	~ 55%	0.070	~ 30%
+MEDIUM	10	 1.887	0.620	~ 32%	0.141	~ 23%
+	11	25.233	3.226	~ 13%	0.277	~  9%
+LARGE	12	44.950	6.579	~ 15%	1.030	~ 16%
