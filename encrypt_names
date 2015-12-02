@@ -3,4 +3,15 @@ python_playground/fast_tsp.py
 python_playground/generate_testcases.py
 python_playground/coordinates_small.test
 python_playground/coordinates_medium.test
+testcases/gentestcases.py
+testcases/test-1-MST.txt
+testcases/test-2-MST.txt
+testcases/test-3-MST.txt
+testcases/test-4-MST.txt
+testcases/test-5-OPTTSP.txt
+testcases/test-6-OPTTSP.txt
+testcases/test-7-OPTTSP.txt
+testcases/test-8-FASTTSP.txt
+testcases/test-9-FASTTSP.txt
+testcases/test-10-FASTTSP.txt
 
