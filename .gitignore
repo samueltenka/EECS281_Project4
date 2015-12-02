@@ -7,3 +7,5 @@ test*.txt
 *.c
 *.py
 !encrypt*.py
+*.tar.gz
+*.o
