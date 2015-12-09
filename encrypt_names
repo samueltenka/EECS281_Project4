@@ -20,4 +20,6 @@ testcases/test-7-OPTTSP.txt
 testcases/test-8-FASTTSP.txt
 testcases/test-9-FASTTSP.txt
 testcases/test-10-FASTTSP.txt
+cpp_dev/FileReader.cpp
 cpp_dev/OPTTSP.cpp
+cpp_dev/Coor.h
