@@ -1,0 +1,5 @@
+from random import choice
+rc = lambda: str(choice(range(100)))
+gc = lambda: '('+rc()+','+rc()+')'
+with open('coors','w') as f:
+   f.write('\n'.join(gc() for i in range(14)))
