@@ -1,5 +1,5 @@
-zoo: OPTTSP.cpp FileReader.cpp Coor.h
-	g++ -std=c++11 -O3 OPTTSP.cpp -o zoo
+zoo: MST.cpp OPTTSP.cpp FileReader.cpp Coor.h
+	g++ -std=c++11 -O3 MST.cpp -o zoo
 clean: zoo
 	rm zoo
 	
