@@ -10,7 +10,7 @@ python_playground/coordinates_smedium.test
 python_playground/coordinates_medium.test
 python_playground/coordinates_largedium.test
 python_playground/coordinates_large.test
-cpp_dev/MST.cpp
+cpp_dev/MST.h
 cpp_dev/FileReader.h
 cpp_dev/GetParams.h
 cpp_dev/Main.cpp
