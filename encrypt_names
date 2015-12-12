@@ -11,6 +11,9 @@ python_playground/coordinates_medium.test
 python_playground/coordinates_largedium.test
 python_playground/coordinates_large.test
 cpp_dev/MST.cpp
+cpp_dev/FileReader.h
+cpp_dev/GetParams.h
+cpp_dev/Main.cpp
 testcases/gentestcases.py
 testcases/test-1-MST.txt
 testcases/test-2-MST.txt
@@ -22,6 +25,5 @@ testcases/test-7-OPTTSP.txt
 testcases/test-8-FASTTSP.txt
 testcases/test-9-FASTTSP.txt
 testcases/test-10-FASTTSP.txt
-cpp_dev/FileReader.cpp
 cpp_dev/OPTTSP.cpp
 cpp_dev/Coor.h
