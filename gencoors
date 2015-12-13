@@ -1,5 +1,13 @@
-from random import choice
-rc = lambda: str(choice(range(100)))
-gc = lambda: '('+rc()+','+rc()+')'
-with open('coors','w') as f:
-   f.write('\n'.join(gc() for i in range(14)))
+def gc(num_pts,fname):
+   from random import choice
+   rc = lambda: str(choice(range(-1024,1024+1)))
+   with open(fname,'w') as f:
+      f.write(str(num_pts)+'\n')
+      f.write('\n'.join(rc()+' '+rc() for i in range(num_pts)))
+gc(1,'coors_0')
+gc(3,'coors_1')
+gc(10,'coors_2')
+gc(30,'coors_3')
+gc(100,'coors_4')
+gc(300,'coors_5')
+gc(1000,'coors_6')
