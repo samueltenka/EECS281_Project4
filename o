@@ -1,0 +1,156 @@
+==21286== Memcheck, a memory error detector
+==21286== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==21286== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==21286== Command: cpp_dev/zoo -m OPTTSP
+==21286== 
+==21286== Invalid read of size 4
+==21286==    at 0x401C6F: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a180a0 is 16 bytes after a block of size 16 in arena "client"
+==21286== 
+==21286== Invalid read of size 2
+==21286==    at 0x401C6F: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a180a8 is 24 bytes after a block of size 16 in arena "client"
+==21286== 
+==21286== Invalid read of size 4
+==21286==    at 0x401C7C: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a180b0 is 32 bytes before a block of size 1,200 in arena "client"
+==21286== 
+==21286== Invalid read of size 2
+==21286==    at 0x401C7C: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a180b8 is 24 bytes before a block of size 1,200 alloc'd
+==21286==    at 0x4C2A105: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21286==    by 0x4034D1: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286== 
+==21286== Invalid read of size 4
+==21286==    at 0x401C6F: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a18c50 is 16 bytes after a block of size 96 alloc'd
+==21286==    at 0x4C2A105: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21286==    by 0x404DC1: void std::vector<XY, std::allocator<XY> >::_M_emplace_back_aux<XY const&>(XY const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402DF0: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286== 
+==21286== Invalid read of size 2
+==21286==    at 0x401C6F: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a18c58 is 24 bytes after a block of size 96 in arena "client"
+==21286== 
+==21286== Invalid read of size 4
+==21286==    at 0x401C7C: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a18c60 is 32 bytes before a block of size 1,200 in arena "client"
+==21286== 
+==21286== Invalid read of size 2
+==21286==    at 0x401C7C: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a18c68 is 24 bytes before a block of size 1,200 alloc'd
+==21286==    at 0x4C2A105: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21286==    by 0x402C64: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286== 
+==21286== Invalid read of size 4
+==21286==    at 0x401C6F: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a19860 is 16 bytes after a block of size 192 alloc'd
+==21286==    at 0x4C2A105: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21286==    by 0x404DC1: void std::vector<XY, std::allocator<XY> >::_M_emplace_back_aux<XY const&>(XY const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402DF0: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286== 
+==21286== Invalid read of size 2
+==21286==    at 0x401C6F: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a19868 is 24 bytes after a block of size 192 in arena "client"
+==21286== 
+==21286== Invalid read of size 4
+==21286==    at 0x401C7C: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a19870 is 32 bytes before a block of size 1,200 in arena "client"
+==21286== 
+==21286== Invalid read of size 2
+==21286==    at 0x401C7C: optimistic_remaining_cost(std::vector<bool, std::allocator<bool> > const&, std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x4029FB: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==  Address 0x5a19878 is 24 bytes before a block of size 1,200 alloc'd
+==21286==    at 0x4C2A105: operator new(unsigned long) (in /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so)
+==21286==    by 0x402C64: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x402B9E: generate_great_paths(std::queue<XY, std::deque<XY, std::allocator<XY> > >&, std::vector<bool, std::allocator<bool> >&, std::vector<XY, std::allocator<XY> >, std::vector<XY, std::allocator<XY> >&, long double, std::vector<XY, std::allocator<XY> >&, long double&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403357: solve_opt(std::vector<XY, std::allocator<XY> > const&, std::vector<XY, std::allocator<XY> >&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x403616: doOPTTSP(std::vector<XY, std::allocator<XY> > const&) (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286==    by 0x400F21: main (in /home/samtenka/Desktop/EECS281_Project4/cpp_dev/zoo)
+==21286== 
+==21286== 
+==21286== HEAP SUMMARY:
+==21286==     in use at exit: 20,400 bytes in 22 blocks
+==21286==   total heap usage: 294,629 allocs, 294,607 frees, 92,153,098 bytes allocated
+==21286== 
+==21286== LEAK SUMMARY:
+==21286==    definitely lost: 0 bytes in 0 blocks
+==21286==    indirectly lost: 0 bytes in 0 blocks
+==21286==      possibly lost: 0 bytes in 0 blocks
+==21286==    still reachable: 20,400 bytes in 22 blocks
+==21286==         suppressed: 0 bytes in 0 blocks
+==21286== Rerun with --leak-check=full to see details of leaked memory
+==21286== 
+==21286== For counts of detected and suppressed errors, rerun with: -v
+==21286== ERROR SUMMARY: 2332032 errors from 12 contexts (suppressed: 2 from 2)

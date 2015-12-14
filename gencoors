@@ -4,10 +4,11 @@ def gc(num_pts,fname):
    with open(fname,'w') as f:
       f.write(str(num_pts)+'\n')
       f.write('\n'.join(rc()+' '+rc() for i in range(num_pts)))
-gc(1,'coors_0')
+gc(25,'coors_25')
+'''gc(1,'coors_0')
 gc(3,'coors_1')
 gc(10,'coors_2')
 gc(30,'coors_3')
 gc(100,'coors_4')
 gc(300,'coors_5')
-gc(1000,'coors_6')
+gc(1000,'coors_6')'''

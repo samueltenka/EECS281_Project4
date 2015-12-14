@@ -1,0 +1,13 @@
+PROBLEM: nonoptimal OPTTSP solutions
+solution: we need MST to work for any given distance function.
+...not yet solved?!
+
+PROBLEM: OPTTSP sometimes finds no solutions at all, resulting in infinite expected cost!
+
+PROBLEM: OPTTSP is fuckn slow
+solution: use fasttsp to get first bound!
+...?
+
+PROBLEM: OPTTSP segfaults
+...is this to do with inputs too large? what data structures do we create?
+
