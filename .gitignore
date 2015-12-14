@@ -9,3 +9,4 @@ test*.txt
 !encrypt*.py
 *.tar.gz
 *.o
+car*

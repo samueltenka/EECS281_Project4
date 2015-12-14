@@ -4,9 +4,13 @@ def gc(num_pts,fname):
    with open(fname,'w') as f:
       f.write(str(num_pts)+'\n')
       f.write('\n'.join(rc()+' '+rc() for i in range(num_pts)))
-gc(5,'coors_15')
-gc(17,'coors_25')
-gc(50,'coors_35')
+
+for i in range(0,60):
+   x = float(i)/(2*10)
+   gc(int(10**x),'cars_'+str(i))
+#gc(5,'coors_15')
+#gc(17,'coors_25')
+#gc(50,'coors_35')
 '''gc(1,'coors_0')
 gc(3,'coors_1')
 gc(10,'coors_2')
