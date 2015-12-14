@@ -1,0 +1,97 @@
+#ifndef MST_H
+#define MST_H
+
+
+#include "FileReader.h"
+#include "Coor.h"
+#include <vector>
+class PrimEntry {
+public:
+   bool visited;
+   double distance_from_tree;
+   int index_of_closest_tree_node;
+   PrimEntry(): visited(false),
+                distance_from_tree(infinity),
+                index_of_closest_tree_node(-1) {} //for us, -1 means no parent yet.
+};
+
+inline bool out_cage(const XY &xy) {return xy.x>0 || xy.y>0;}
+inline bool in_cage(const XY &xy) {return xy.x<0 && xy.y<0;}
+inline double walled_distance(int i, int j, const std::vector<XY> &coors) {
+   XY a=coors[i], b=coors[j];
+   if(in_cage(a)&&out_cage(b) || in_cage(b)&&out_cage(a)) {return infinity;}
+   return dist(a,b);
+}
+inline double unwalled_distance(int i,int j, const std::vector<XY> &coors) {
+   return dist(coors[i],coors[j]);
+}
+
+class PrimTable {
+public:
+   std::vector<PrimEntry> data;
+   double (*md)(int,int, const std::vector<XY>&);
+   PrimTable(const std::vector<bool> &visited, double (*modified_distance)(int,int, const std::vector<XY>&)) {
+      data.resize(visited.size());
+      for(int i=0; i<visited.size(); ++i) {
+         data[i].visited=visited[i];
+      }
+      md=modified_distance;
+   }
+   void update(int new_index, const std::vector<XY> &coors) {
+      data[new_index].visited=true;
+      for(int i=0; i<data.size(); ++i) {
+         if(data[i].visited) {continue;}
+         double d = (*md)(i,new_index,coors);
+         if(d>=data[i].distance_from_tree) {continue;}
+         data[i].distance_from_tree=d;
+         data[i].index_of_closest_tree_node=new_index;
+      }
+   }
+   int nearest_unvisited() const { //TODO: improve min-finding speed with a _heap_
+     int best_index=-1; double least_distance=infinity;
+     for(int i=0; i<data.size(); ++i) {
+        if(data[i].visited) {continue;}
+        if(data[i].distance_from_tree>=least_distance) {continue;}
+        least_distance=data[i].distance_from_tree;
+        best_index=i;
+     }
+     return best_index; //returns -1 if all have been visited.
+   }
+};
+
+
+
+double prim_partial(const std::vector<bool> &visited, double (*modified_distance)(int,int, const std::vector<XY>&),
+                    const std::vector<XY> &coors, std::vector<std::pair<int,int>> &mst_edges) {
+   //1. Fill out Prim's Table
+   PrimTable PT(visited, modified_distance);
+   int s;
+   for(s=0;s<visited.size();++s) {if(!visited[s]){break;}}
+   if(s==visited.size()) {mst_edges.clear(); return 0.0;}
+   PT.update(s,coors);
+   int n;
+   while((n=PT.nearest_unvisited())!=-1) {
+      PT.update(n,coors);
+   }
+
+   //2. Read from Prim's Table
+   double tot_cost=0.0;
+   mst_edges.clear();
+   for(int i=0; i<coors.size(); ++i) {
+      if(i==s){continue;}
+      int j=PT.data[i].index_of_closest_tree_node;
+      if(i<j) {mst_edges.push_back(std::pair<int,int>(i,j));}
+      else    {mst_edges.push_back(std::pair<int,int>(j,i));}
+      tot_cost += (*modified_distance)(i,j,coors);
+   }
+   return tot_cost;
+}
+
+double prim(const std::vector<XY> &coors, std::vector<std::pair<int,int>> &mst_edges) {
+   std::vector<bool> visited; visited.resize(coors.size(),false);
+   return prim_partial(visited,&walled_distance,coors,mst_edges);
+}
+
+
+
+#endif//MST_H
